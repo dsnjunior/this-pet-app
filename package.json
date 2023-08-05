@@ -1,15 +1,29 @@
 {
   "name": "this-pet-app",
-  "version": "1.0.44",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "db:push": "bunx drizzle-kit push:pg",
+    "db:gen": "bunx drizzle-kit generate:pg",
+    "dev": "concurrently \"bun run --watch src/index.ts\" \"bun run tw:dev\"",
+    "tw": "bunx tailwindcss -i ./src/styles.css -o ./public/styles.css",
+    "tw:dev": "bunx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cookie": "^0.5.2",
+    "@elysiajs/html": "^0.5.2",
+    "@elysiajs/static": "^0.5.3",
+    "@supabase/supabase-js": "^2.31.0",
+    "drizzle-orm": "^0.27.2",
+    "elysia": "^0.5.25",
+    "postgres": "^3.3.5"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "^0.7.2",
+    "concurrently": "^8.2.0",
+    "drizzle-kit": "^0.19.12",
+    "prettier": "^3.0.1",
+    "tailwindcss": "^3.3.3",
+    "typed-html": "^3.0.1"
   },
   "module": "src/index.js"
 }
