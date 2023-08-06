@@ -11,8 +11,9 @@ import { relations } from "drizzle-orm";
 
 export const users = pgTable("users", {
   id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
+  name: text("name"),
+  email: text("email"),
+  avatar: text("avatar"),
 });
 
 export const usersRelations = relations(users, ({ many }) => ({
@@ -26,6 +27,7 @@ export const pets = pgTable("pets", {
   name: text("name").notNull(),
   type: petType("type").notNull(),
   birthDate: date("birth_date"),
+  avatar: text("avatar"),
   createdBy: text("created_by")
     .notNull()
     .references(() => users.id),

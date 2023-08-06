@@ -3,9 +3,9 @@ import { cookie } from "@elysiajs/cookie";
 import { html } from "@elysiajs/html";
 import * as elements from "typed-html";
 
-import { supabase } from "@/libs/supabase";
-import { auth as authLib } from "@/libs/auth";
-import { db, schema } from "@/libs/db";
+import { supabase } from "@/lib/supabase";
+import { auth as authLib } from "@/lib/auth";
+import { db, schema } from "@/lib/db";
 
 import { Template } from "@/components/template";
 

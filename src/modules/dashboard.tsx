@@ -3,7 +3,7 @@ import { html } from "@elysiajs/html";
 import * as elements from "typed-html";
 
 import { Template } from "@/components/template";
-import { auth } from "@/libs/auth";
+import { auth } from "@/lib/auth";
 
 export const dashboard = (app: Elysia) =>
   app.group("/dashboard", (app) =>

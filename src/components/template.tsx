@@ -10,6 +10,7 @@ export const Template = ({
       <meta name="viewport" content="width=device-width" />
       <title>{title}</title>
       <script src="/public/htmx.org@1.9.4.min.js"></script>
+      <script src="/public/hyperscript.org@0.9.11.min.js"></script>
       <link href="/public/styles.css" rel="stylesheet"></link>
     </head>
     <body>{children}</body>

@@ -13,9 +13,12 @@
     "@elysiajs/html": "^0.5.2",
     "@elysiajs/static": "^0.5.3",
     "@supabase/supabase-js": "^2.31.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "drizzle-orm": "^0.27.2",
     "elysia": "^0.5.25",
-    "postgres": "^3.3.5"
+    "postgres": "^3.3.5",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "bun-types": "^0.7.2",

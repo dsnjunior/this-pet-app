@@ -2,8 +2,8 @@ import { Elysia } from "elysia";
 import { cookie } from "@elysiajs/cookie";
 import { eq } from "drizzle-orm";
 
-import { supabase } from "@/libs/supabase";
-import { db, schema } from "@/libs/db";
+import { supabase } from "@/lib/supabase";
+import { db, schema } from "@/lib/db";
 
 const refreshToken = async (refresh_token: string) => {
   if (!refresh_token) {
